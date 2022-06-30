@@ -28,7 +28,6 @@ function onFormSubmit(event) {
   }
 
   pixabayApi(query, page).then(response => {
-    console.log(response.data.totalHits);
     if (response.data.totalHits === 0) {
       loadMoreBtn.classList.add('hidden');
       Notiflix.Notify.failure(
