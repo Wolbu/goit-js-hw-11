@@ -39,8 +39,7 @@ function onFormSubmit(event) {
       loadMoreBtn.classList.remove('hidden');
       Notiflix.Notify.success(`Hooray! ${response.data.totalHits} images found.`);
       const hits = response.data.hits;
-      const markup = hits
-        .map(image => {
+      const markup = hits.map(image => {
           return `<div class='photo-card'>
         <a href='${image.largeImageURL}'><img
             src='${image.webformatURL}'
