@@ -38,7 +38,7 @@ function onFormSubmit(event) {
     } else {
       loadMoreBtn.classList.remove('hidden');
       Notiflix.Notify.success(`Hooray! ${response.data.totalHits} images found.`);
-      hits = response.data.hits;
+      const hits = response.data.hits;
       const markup = hits
         .map(image => {
           return `<div class='photo-card'>
@@ -90,7 +90,7 @@ function onLoadMoreClick() {
         "We're sorry, but you've reached the end of search results."
       );
     } else {
-      hits = response.data.hits;
+     const hits = response.data.hits;
       const markup = hits
         .map(image => {
           return `<div class='photo-card'>
